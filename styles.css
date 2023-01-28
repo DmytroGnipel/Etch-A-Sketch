@@ -1,0 +1,10 @@
+.cell {
+    display: inline-block; width: 30px; height: 30px;
+     background-color: aqua;border: 1px solid purple;}
+.global {padding: 30px; display: block; background-color: antiquewhite; border-color: 1px solid purple; text-align: center;}
+.block {display: block; width: 300px;}
+.row {display: block;}
+p {text-align: center;}
+body {text-align: center;}
+.mouseover {display: inline-block; width: 30px; height: 30px;
+    background-color: black;border: 1px solid purple;}
