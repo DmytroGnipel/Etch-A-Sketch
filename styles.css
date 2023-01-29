@@ -1,11 +1,26 @@
+.global {
+    display: inline-block;
+    background-color: gray;
+    border: 1px solid white;
+    }
+.row {
+    display: block;
+}
+
+body {
+    text-align: center; 
+    background-color: black;
+     color: white; 
+     font-weight: bold;
+}
+button {
+    width: 150px; 
+    height: 50px;
+    margin-left: 50px;
+    background-color: white;
+    font-size: 17px;
+}
+
 .cell {
-    display: inline-block; width: 30px; height: 30px;
-     background-color: aqua;border: 1px solid purple;}
-.global {padding: 30px; display: block; background-color: antiquewhite; border-color: 1px solid purple; text-align: center;}
-.block {display: block; width: 300px;}
-.row {display: block;}
-p {text-align: center;}
-body {text-align: center;}
-.mouseover {display: inline-block; width: 30px; height: 30px;
-    background-color: black;border: 1px solid purple;}
-    button {width: 150px; height: 50px; margin-left: 50px;}
+    display: inline-block;
+}
