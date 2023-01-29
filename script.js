@@ -26,6 +26,18 @@ row.appendChild(cell)
 }
 getGrid(16)
 //end of getting grid
+
+mouseOverWhiteToBlack()
+
+//getNewGrid
+button.addEventListener('click', function (){
+    let row = document.getElementsByClassName('row')
+    for (i = 0; i < row.length; i++)
+    row[i].style.display = 'none'
+    let dimension = prompt('enter dimension of the grid')
+    getGrid(dimension)
+    mouseOver()
+})
 //get effect of mouseOver
 function mouseOver() {
     let cells = document.getElementsByClassName('cell')
@@ -36,14 +48,30 @@ function mouseOver() {
         })
     }
     }
-mouseOver()
+function mouseOverRandomColor() {
+    let cells = document.getElementsByClassName('cell')
+    for (let cell of cells) {
+        cell.addEventListener('mouseover', function(){
+            let r = Math.floor(Math.random() * 256),
+            g = Math.floor(Math.random() * 256),
+            b = Math.floor(Math.random() * 256)
+            this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+        })
+    }
+    }
+function mouseOverWhiteToBlack() {
+    let cells = document.getElementsByClassName('cell')
+    let r = 255, g = 255, b = 255
+    for (let cell of cells) {
+    cell.addEventListener('mouseover', function(){
+    this.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+    if (r == 0) r = 255, g = 255, b = 255
+    r -= 25.5
+    g -= 25.5
+    b -= 25.5
+        })
+    }
+    }
 //end effect of mouseOver
-//getNewGrid
-button.addEventListener('click', function (){
-    let row = document.getElementsByClassName('row')
-    for (i = 0; i < row.length; i++)
-    row[i].style.display = 'none'
-    let dimension = prompt('enter dimension of the grid')
-    getGrid(dimension)
-    mouseOver()
-})
+    
+
